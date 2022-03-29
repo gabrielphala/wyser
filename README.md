@@ -36,7 +36,7 @@ export default () => {
 
 Src\index.js
 ```JavaScript
-import Wyser from '@gabrielphala/wyser';
+import Wyser from 'wyser';
 import app from './app.js';
 
 app();
@@ -52,8 +52,8 @@ ___
 Src\layouts.js
 
 ```JavaScript
-import { Layout } from '@gabrielphala/wyser';
-import { create, div, component, element } from '@gabrielphala/wyser/Dom';
+import { Layout } from 'wyser';
+import { create, div, component, element } from 'wyser/Dom';
 
 export default () => {
     Layout('page.one.layout', create(element(div('root', 'container'), [
@@ -90,7 +90,7 @@ ___
 Src\tags.js
 
 ```javascript
-import { Tag } from "@gabrielphala/wyser";
+import { Tag } from "wyser";
 
 export default () => {
     /**
@@ -113,7 +113,7 @@ Src\components.js
 Creating a standard component
 
 ```JavaScript
-import { Component } from "@gabrielphala/wyser";
+import { Component } from "wyser";
 
 export default () => {
     Component('sidenav', {
@@ -187,7 +187,7 @@ Routes are paths where a layout has to be rendered
 ___
 Src\routes.js
 ```JavaScript
-import { Route } from '@gabrielphala/wyser';
+import { Route } from 'wyser';
 
 export default () => {
     Route('page.one', {
@@ -209,7 +209,7 @@ export default () => {
 Route Params. Params can be defined in a route URI and resolved when that route is loaded by the brower
 
 ```JavaScript
-import { Router } from "@gabrielphala/wyser";
+import { Router } from "wyser";
 
 console.log(Router.currentParams); // returns params of the current route
 
@@ -219,7 +219,7 @@ console.log(Router.use('route.name').params) // returns params
 Route Tags. Group routes into multiple categories and return their names when they are used
 
 ```JavaScript
-import { Router } from "@gabrielphala/wyser";
+import { Router } from "wyser";
  
 export default () => {
     const allRoutes = Router.getRoutesByTag('another.tag');
@@ -252,7 +252,7 @@ Middleware functions are run every time before components and routes are loaded
 Src\middleware.js
 
 ```JavaScript
-import { Middleware, Singleton } from "@gabrielphala/wyser";
+import { Middleware, Singleton } from "wyser";
 
 module.exports = () => {
     // string | array
@@ -278,7 +278,7 @@ Component events, will be fired when something happens to the component, like wh
 Src\events.js
 
 ```JavaScript
-import { Components, Singleton } from '@gabrielphala/wyser';
+import { Components, Singleton } from 'wyser';
 
 const getSideNav = (someData) => {
     return `<div>Name: ${someData.name}</div>`;
