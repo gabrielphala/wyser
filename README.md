@@ -4,7 +4,7 @@ A JavaScript Single Page Application (SPA) Framework
 ## Installation
 Intall using npm package manager
 ```
-npm i @gabrielphala/wyser
+npm i wyser
 ```
 
 ## Usage
